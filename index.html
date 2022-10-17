@@ -5,13 +5,23 @@
         <meta name="description" content="A page for meeting minutes">
         <meta name="keywords" content="HTML">
         <meta name="author" content="Justin Wang">
-        <link rel="icon" href="./favicon.ico"> <!--fix this-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./style.css">
+        <link rel="icon" href="./favicon.ico">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
+        <style>
+            .body {
+                background-color: #192841;
+            }
+        </style>
     </head>
-    <body>
-        <main>
-            <header>
-                <h3>This is the header of the header</h3>
-                <nav>
+    <body class="body">
+        <main class="main">
+            <header class="header">
+                <h3 style="color: red;" id="header-header">This is the header of the header</h3>
+                <nav class="navbar">
                     <ol>
                         <li><a href="#">This leads nowhere</a></li>
                         <li><a href="#">This also leads nowhere</a></li>
@@ -19,14 +29,14 @@
                 </nav>
             </header>
 
-            <h1>Meeting Notes</h1>
+            <h1 class="main-title">Meeting Notes</h1>
             <section>
                 <div>
-                    <h2>Brainstorming</h2>
+                    <h2 id="brainstorming">Brainstorming</h2>
                 </div>
                 <h3>October 9, <span>2022</span></h3>
-                <p>Attendants:</p>
-                <ul>
+                <p class="attend-title">Attendants:</p>
+                <ul class="attend-ul">
                     <li> Justin</li>
                     <li> Jacob</li>
                     <li> Janet</li>
@@ -36,73 +46,81 @@
             
             <hr>
 
-            <strong>Complete the survey!!</strong>
-            <b>Covered in this meeting: Nothing.</b>
+            <div class="special">
+                <strong>Complete the survey!!</strong>
+                <b>Covered in this meeting: Nothing.</b>
 
-            <br>
+                <br>
 
-            <i>Italix?</i>
-            <em>emphasized italix?</em>
+                <i>Italix?</i>
+                <em>emphasized italix?</em>
+            </div>
 
             <br>
 
             <!--Add img, audio, and video-->
 
-            <a href="https://www.youtube.com">Visit youtube!</a>
+            <a class="hyperlink" href="https://www.youtube.com">Visit youtube!</a>
 
-            <details>
+            <details class="details">
                 <summary>Meeting Details</summary>
                 <p>Today we took a meeting and figured out that we
                     have no idea what we're doing in this project.
                 </p>
             </details>
 
-            <form>
-                <fieldset>
-                    <label>First name: </label>
-                    <input type="text"><br>
+            <form class="form">
+                <fieldset class="fieldset">
+                    <div class="item1">
+                        <label>First name: </label>
+                        <input type="text"><br>
 
-                    <label>Last name: </label>
-                    <input type="text"><br>
+                        <label>Last name: </label>
+                        <input type="text"><br>
+                    </div>
 
-                    <input type="checkbox">
-                    <label>Attended meeting</label><br>
+                    <div class="item2">
+                        <input type="checkbox">
+                        <label>Attended meeting</label><br>
 
-                    <p>Gender:</p>
-                    <input type="radio">
-                    <label>Male</label><br>
-                    <input type="radio">
-                    <label>Female</label><br>
-                    <input type="radio">
-                    <label>Other</label><br> 
+                        <p>Gender:</p>
+                        <input type="radio">
+                        <label>Male</label><br>
+                        <input type="radio">
+                        <label>Female</label><br>
+                        <input type="radio">
+                        <label>Other</label><br> 
 
-                    <br>
-                    <label>Date: </label>
-                    <input type="date"><br>
+                        <br>
+                        <label>Date: </label>
+                        <input type="date"><br>
+                    </div>
 
-                    <br>
-                    <label>Thoughts on meeting: </label><br>
-                    <textarea></textarea><br>
+                    <div class="item3">
+                        <br>
+                        <label>Thoughts on meeting: </label><br>
+                        <textarea></textarea><br>
 
-                    <br>
-                    <label>Choose your browser: </label>
-                    <select>
-                        <option value="Edge">Edge</option>
-                        <option value="Chrome">Chrome</option>
-                        <option value="Firefox">Firefox</option>
-                        <option value="Safari">Safari</option>
-                        <option value="Opera">Opera</option>
-                    </select><br>
+                        <br>
+                        <label>Choose your browser: </label>
+                        <select>
+                            <option value="Edge">Edge</option>
+                            <option value="Chrome">Chrome</option>
+                            <option value="Firefox">Firefox</option>
+                            <option value="Safari">Safari</option>
+                            <option value="Opera">Opera</option>
+                        </select><br>
 
-                    <br>
-                    <label>Most valuable attendant: </label>
-                    <input list="browsers">
-                    <datalist id="browsers">
-                        <option value="Justin"></option>
-                        <option value="Jacob"></option>
-                        <option value="Janet"></option>
-                        <option value="Jerry"></option>
-                    </datalist>
+                        <br>
+                        <label>Most valuable attendant: </label>
+                        <input list="browsers">
+                        <datalist id="browsers">
+                            <option value="Justin"></option>
+                            <option value="Jacob"></option>
+                            <option value="Janet"></option>
+                            <option value="Jerry"></option>
+                        </datalist>
+                    </div>
 
                     <br>
                     <button type="button">I do nothing!</button>
@@ -113,18 +131,21 @@
                 </fieldset>
             </form>
 
-            <video width="600" height="350" controls>
-                <source src="./media/vid.MOV">
-            </video>
 
-            <br>
-            <audio controls>
-                <source src="./media/soundtest.mp3">
-            </audio>
+            <div class="media">
+                <video class="vid" width="600" height="350" controls>
+                    <source src="./media/vid.MOV">
+                </video>
 
-            <footer>
+                <br>
+                <audio class="audio" controls>
+                    <source src="./media/soundtest.mp3">
+                </audio>
+            </div>
+
+            <footer class="footer">
                 <h4>This is the header of the footer</h4>
-                <img src="./screenshots/W3Validation.png">
+                <img class="img" src="./screenshots/W3Validation.png">
             </footer>
         </main>
     </body>

@@ -1,0 +1,113 @@
+/* Style Sheet for index.html */
+
+p, label {
+    color: grey;
+}
+
+h3 {
+    color: rgb(135, 206, 235);
+    margin: 20px 25px 15px 25px;
+}
+
+* {
+    font-family: 'Roboto', sans-serif;
+    color: white;
+}
+
+a[href^="#"] {
+    color: hsla(120,60%,70%,0.3);
+}
+
+a:hover {
+    color: #FF00FF;
+}
+
+a:active {
+    color: #0000FF;
+}
+
+@media only screen and (max-width: 600px) {
+    .img {
+        height: 200px;
+        width: 400px;
+    }
+}
+
+div label {
+    color: yellow
+}
+
+summary > details {
+    color: green
+}
+
+li ~ li {
+    color: blue
+} 
+
+b + strong {
+    color: grey
+}
+
+p.attend-title {
+    color: white
+}
+
+#header-header {
+    color: blue
+}
+
+
+.navbar {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 5px;
+    border-width: 5px;
+    border-style: dotted;
+    border-width: thin;
+    border-radius: 15%;
+    border-color: lime
+}
+
+.main-title {
+    text-align: center;
+    text-decoration: underline;
+    padding: 20px 0px 25px 0px;
+    display: inline-block;
+    height: 100px;
+    width: 600px;
+    font-size: 500%;
+}
+
+.special {
+    margin: auto;
+    display: block;
+}
+
+.details {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+
+.fieldset {
+    position: sticky;
+    display: grid;
+    column-gap: 10px;
+    row-gap: 10px;
+    grid-area: 1 / 1 / span 2 / span 2;
+    max-width: 60%;
+    max-height: 30%;
+}
+
+.media {
+    padding: 5%;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
